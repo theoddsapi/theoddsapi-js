@@ -1,5 +1,5 @@
 /**
- * theoddsapi: official JavaScript client for TheOddsAPI (theoddsapi.com).
+ * theoddsapi: official JavaScript client for Betting Data API (bettingdataapi.com).
  * Zero dependencies; uses global fetch (Node 18+, all modern runtimes).
  *
  *   import { TheOddsAPI } from "@theoddsapi/client";
@@ -7,7 +7,7 @@
  *   const odds = await client.odds("baseball_mlb", { oddsFormat: "decimal" });
  */
 
-const BASE_URL = "https://api.theoddsapi.com";
+const BASE_URL = "https://api.bettingdataapi.com";
 const RETRY_STATUSES = new Set([502, 503, 504]);
 
 export class TheOddsAPIError extends Error {
@@ -28,7 +28,7 @@ export class TheOddsAPI {
     if (!this.apiKey) {
       throw new TheOddsAPIError(0,
         `no API key: pass new TheOddsAPI("key") or set ${ENV_KEY}. ` +
-        "Free key in minutes at https://theoddsapi.com/start");
+        "Free key in minutes at https://bettingdataapi.com/start");
     }
     this.baseUrl = baseUrl.replace(/\/$/, "");
     this.timeoutMs = timeoutMs;
@@ -42,7 +42,7 @@ export class TheOddsAPI {
     let delay = 1000;
     for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
       const res = await fetch(url, {
-        headers: { "x-api-key": this.apiKey, "User-Agent": "theoddsapi-js/1.0.1" },
+        headers: { "x-api-key": this.apiKey, "User-Agent": "theoddsapi-js/1.0.2" },
         signal: AbortSignal.timeout(this.timeoutMs),
       }).catch((e) => {
         if (attempt === this.maxRetries) throw new TheOddsAPIError(0, `connection failed: ${e.message}`);

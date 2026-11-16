@@ -1,13 +1,13 @@
 # @theoddsapi/client
 
-Official JavaScript client for [TheOddsAPI](https://theoddsapi.com): real-time sports odds from 50+ sportsbooks across 26 sports, normalized into one JSON shape, plus player props, Pinnacle-anchored edge detection, fair odds, and historical snapshots.
+Official JavaScript client for [Betting Data API](https://bettingdataapi.com): real-time sports odds from 50+ sportsbooks across 20+ sports, normalized into one JSON shape, plus player props, Pinnacle-anchored edge detection, fair odds, and historical snapshots.
 
 Zero dependencies. Node 18+ or any runtime with global fetch.
 
-## Why TheOddsAPI?
+## Why Betting Data API?
 
 - 50+ sportsbooks, one JSON shape
-- 26 sports, plus player props and historical snapshots
+- 20+ sports, plus player props and historical snapshots
 - Pinnacle-anchored fair odds and cross-book arbitrage (Business)
 - Zero dependencies — uses global fetch, nothing to install
 
@@ -26,7 +26,7 @@ const client = new TheOddsAPI("YOUR_API_KEY");
 const odds = await client.odds("baseball_mlb", { oddsFormat: "decimal" });
 ```
 
-Get a free key in minutes at [theoddsapi.com/start](https://theoddsapi.com/start). No credit card.
+Get a free key in minutes at [bettingdataapi.com/start](https://bettingdataapi.com/start). No credit card.
 
 ## Endpoints
 
@@ -49,8 +49,8 @@ Runnable scripts in `examples/`, each showing one endpoint end to end:
 
 ## Links
 
-Full reference: [theoddsapi.com/docs](https://theoddsapi.com/docs/) · Guides: [theoddsapi.com/guides](https://theoddsapi.com/guides/) · Free calculators: [theoddsapi.com/tools](https://theoddsapi.com/tools/)
+Full reference: [bettingdataapi.com/docs](https://bettingdataapi.com/docs/) · Guides: [bettingdataapi.com/guides](https://bettingdataapi.com/guides/) · Free calculators: [bettingdataapi.com/tools](https://bettingdataapi.com/tools/)
 
 ## License
 
-MIT. Independently developed against the published TheOddsAPI OpenAPI specification.
+MIT. Independently developed against the published Betting Data API OpenAPI specification.

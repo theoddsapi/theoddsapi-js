@@ -5,7 +5,7 @@
  *   export THEODDSAPI_API_KEY=your_key_here
  *   node examples/player_props.js
  *
- * Guide: https://theoddsapi.com/guides/nba-player-props-edge-detection
+ * Guide: https://bettingdataapi.com/guides/nba-player-props-edge-detection
  *
  * Note: props responses follow the same events/books/outcomes envelope as
  * GET /odds/, but the exact market-specific fields can vary by sport. This
